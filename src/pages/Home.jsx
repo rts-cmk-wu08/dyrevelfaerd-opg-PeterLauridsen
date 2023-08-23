@@ -48,19 +48,19 @@ const Home = () => {
           className="heroPicture"
           style={{ backgroundImage: `url(${dataAdoptsections[0].asset.url})` }}
         >
-          <h1>{dataAdoptsections[0].title}</h1>
-          <p>{dataAdoptsections[0].content}</p>
+            <article className="whiteTextMod">
+          <h1 className="whiteText">{dataAdoptsections[0].title}</h1>
+          <p className="whiteText">{dataAdoptsections[0].content}</p>
+            </article>
         </section>
 
         <section>
           {dataAbout.map((about) => {
             return (
-            
-                <article key={about.id} className="aboutSection">
-                  <h2> {about.title}</h2>
-                  <p>{about.content}</p>
-                </article>
-              
+              <article key={about.id} className="aboutSection">
+                <h2> {about.title}</h2>
+                <p>{about.content}</p>
+              </article>
             );
           })}
         </section>
@@ -76,6 +76,16 @@ const Home = () => {
             );
           })}
         </section>
+
+                     
+        <section
+          className="hedgehogPicture"
+          style={{ backgroundImage: `url(${dataAdoptsections[1].asset.url})` }}
+        >
+          <h1>{dataAdoptsections[1].title}</h1>
+          <p>{dataAdoptsections[1].content}</p>
+        </section>
+
       </main>
     );
   }
