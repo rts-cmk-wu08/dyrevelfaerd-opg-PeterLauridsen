@@ -1,4 +1,10 @@
-h1{
-    color: rgb(255, 255, 255);
-    font-size: 3rem;
+body{
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    line-height: 1.5;
+    font-weight: 400, 700;
 }
+

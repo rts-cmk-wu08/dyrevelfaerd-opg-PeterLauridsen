@@ -1,0 +1,36 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  /* position: sticky; */
+  z-index: 999;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  position: sticky;
+  z-index: 999;
+}
+
+.herotext {
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+.herotextPic {
+  width: 3rem;
+  height: 3rem;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.asd{
+    text-decoration: none;
+}

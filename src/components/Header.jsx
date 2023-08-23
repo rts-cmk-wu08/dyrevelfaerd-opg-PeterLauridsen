@@ -1,17 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
   return (
-    <header>
-      <h1>Welcome to My App</h1>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
-    </header>
+    <>
+      <header>
+        <span className="d-flex">
+          <img src="logo.png" className="herotextPic" alt="frontlogo" />
+          <a className="herotext">Foreningen for Dyrevelfærd</a>
+        </span>
+
+        <nav>
+          <Link to="/" className="asd">Hjem</Link>
+          <Link to="#">Om os</Link>
+          <Link to="#">Bliv Frivillig</Link>
+          <Link to="#">Dyr i nød?</Link>
+          <Link to="#">Adopter et dyr</Link>
+        </nav>
+      </header>
+
+      <Outlet />
+    </>
   );
 };
 
