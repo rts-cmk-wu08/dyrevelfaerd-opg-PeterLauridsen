@@ -1,12 +1,8 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/ZAR1va91)
-# Foreningen for Dyrevelfaerd - opgave
+# React + Vite
 
-Ud over denne opgave er der udleveret et separat assignment som indeholder det api du skal hente data fra. Følg vejledningen i readme filen for api'et for at installere og køre api'et.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Du skal ikke lave en aflevering på api-assignment, men udelukkende på dette opgave assignment. 
+Currently, two official plugins are available:
 
-* Opgavebeskrivelsen findes i den vedlagte pdf
-* Layoutet findes i den vedlagte fil "layout.jpg".
-* Foreningen for Dyrevelfærds logo er vedlagt i filen  "logo.png".
-
-**God Arbejdslyst!**
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
