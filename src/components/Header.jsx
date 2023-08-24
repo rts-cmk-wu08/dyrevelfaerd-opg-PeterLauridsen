@@ -5,18 +5,18 @@ import "./Header.css";
 const Header = () => {
   return (
     <>
-      <header>
-        <span className="d-flex">
+      <header className="nav">
+        <span className="d-flex center">
           <img src="logo.png" className="herotextPic" alt="frontlogo" />
-          <a className="herotext">Foreningen for Dyrevelfærd</a>
+          <a className="herotext navText">Foreningen for Dyrevelfærd</a>
         </span>
 
-        <nav>
-          <Link to="/" className="asd">Hjem</Link>
-          <Link to="#">Om os</Link>
-          <Link to="#">Bliv Frivillig</Link>
-          <Link to="#">Dyr i nød?</Link>
-          <Link to="#">Adopter et dyr</Link>
+        <nav className="d-flex center">
+          <Link to="/" className="navText">Hjem</Link>
+          <Link to="#" className="navText" >Om os</Link>
+          <Link to="#" className="navText">Bliv Frivillig</Link>
+          <Link to="#" className="navText">Dyr i nød?</Link>
+          <Link to="#" className="navText">Adopter et dyr</Link>
         </nav>
       </header>
 

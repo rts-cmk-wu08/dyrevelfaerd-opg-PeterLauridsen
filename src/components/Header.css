@@ -29,8 +29,29 @@ header {
 .d-flex {
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
+
 }
 
-.asd{
+.navText{
     text-decoration: none;
+    color: gray
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80rem;
+
+  
+
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
 }
