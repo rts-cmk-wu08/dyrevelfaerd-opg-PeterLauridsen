@@ -45,23 +45,27 @@ const Home = () => {
     return (
       <main>
         {/* {Header} */}
-        <section
+        <header
           className="bannerPicture"
           style={{ backgroundImage: `url(${dataAdoptsections[0].asset.url})` }}
         >
           <article className="whiteTextMod">
-            <h1 className="whiteText whiteText-size-h1">{dataAdoptsections[0].title}</h1>
-            <p className="whiteText whiteText-size-p">{dataAdoptsections[0].content}</p>
+            <h1 className="whiteText whiteText-size-h1">
+              {dataAdoptsections[0].title}
+            </h1>
+            <p className="whiteText whiteText-size-p">
+              {dataAdoptsections[0].content}
+            </p>
           </article>
-        </section>
+        </header>
         {/* {Header} */}
 
         {/* {About} */}
         <section className="card-grid">
           {dataAbout.map((about) => {
             return (
-              <article key={about.id}>
-                <h2> {about.title}</h2>
+              <article className="aboutArticle" key={about.id}>
+                <h2 className="blueText aboutTextSize"> {about.title}</h2>
                 <p>{about.content}</p>
               </article>
             );
@@ -70,13 +74,17 @@ const Home = () => {
         {/* {About} */}
 
         {/* {Frivilig} */}
-        <section className="card-grid">
+        <section className="card-grid bg-softBlue">
           {dataVolunteers.map((volunteer) => {
             return (
               <article key={volunteer.id} className="volunteerSection">
-                <h2 className="cardPicTextHeader" >{volunteer.title}</h2>
-                <img className="cardPic" src={volunteer.asset.url} alt={volunteer.title} />
-                <p className="cardPicText" >{volunteer.content}</p>
+                <h2 className="cardPicTextHeader">{volunteer.title}</h2>
+                <img
+                  className="cardPic"
+                  src={volunteer.asset.url}
+                  alt={volunteer.title}
+                />
+                <p className="cardPicText">{volunteer.content}</p>
               </article>
             );
           })}
@@ -88,50 +96,70 @@ const Home = () => {
           className="bannerPicture"
           style={{ backgroundImage: `url(${dataAdoptsections[1].asset.url})` }}
         >
-          <h1 className="whiteText">{dataAdoptsections[1].title}</h1>
-          <p className="whiteText">{dataAdoptsections[1].content}</p>
+          <h1 className="whiteText whiteText-size-h1">
+            {dataAdoptsections[1].title}
+          </h1>
+          <p className="whiteText whiteText-size-p">
+            {dataAdoptsections[1].content}
+          </p>
         </section>
         {/* {Dyr i nød} */}
 
         {/* {Newsletter} */}
-        <section>
+        <section className="bg-softBlue newsletterFlex">
+          <h1 className="blueText">Tilmeld vores nyhedsbrev</h1>
+          <p>
+            Få inspiration og nyheder om dyrevelfærd og vores arbejde. direkte i
+            din inbakke.
+          </p>
           <form>
-            <h2>asdasdd</h2>
-            <p>asdasdasdasd</p>
-            <input type="text" />
-            <input type="text" />
-            <button>asdasdsd</button>
+            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Navn" />
           </form>
+          <button>Tilmeld</button>
         </section>
         {/* {Newsletter} */}
 
+        {/* {Adopter et dyr} */}
         <section
           className="bannerPicture"
           style={{ backgroundImage: `url(${dataAdoptsections[2].asset.url})` }}
         >
-          <h1 className="whiteText">{dataAdoptsections[2].title}</h1>
-          <p className="whiteText">{dataAdoptsections[2].content}</p>
+          <h1 className="whiteText whiteText-size-h1">
+            {dataAdoptsections[2].title}
+          </h1>
+          <p className="whiteText whiteText-size-p">
+            {dataAdoptsections[2].content}
+          </p>
         </section>
-
+        {/* {Adopter et dyr} */}
+       
+        {/* {Dyr hos os} */}
         <section>
-          <h1>Dyr hos os</h1>
-          <p>{dataAnimals.length} Dyr</p>
-          <div className="card-dyr">
+          <h1 className="blueText">Dyr hos os</h1>
+          <p>{dataAnimals.length} dyr</p>
+          <div className="gridContainer">
             {dataAnimals.map((animal) => {
               return (
-                <article key={animal.id}>
-                  <h2>{animal.name}</h2>
-                  <img src={animal.asset.url} alt={animal.title} />
-                  <p>{animal.description}</p>
+                <article className="card-dyr" key={animal.id}>
+                  <div>
+                    <img
+                      className="card-dyr-pic"
+                      src={animal.asset.url}
+                      alt={animal.title}
+                    />
+                  </div>
+                  <span>
+                    <h2>{animal.name}</h2>
+                    <p>{animal.description}</p>
+                  </span>
                 </article>
               );
             })}
           </div>
         </section>
-
-        <footer>
-          <h1>Footer</h1>
-        </footer>
+        {/* {Dyr hos os} */}
+        
       </main>
     );
   }

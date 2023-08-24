@@ -1,0 +1,43 @@
+footer{
+    height: 10rem;
+}
+
+.footerGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 10rem;
+    text-align: center;  
+    > p {
+      grid-column:2 ;
+    }     
+}
+
+.contactH2{
+    text-transform: uppercase;
+    font-weight: 300;
+} 
+
+.partnersH2{
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+
+.partnerFlex{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contactFlex{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.blueTextPartners{
+    color: rgb(65, 65, 186);
+}
+

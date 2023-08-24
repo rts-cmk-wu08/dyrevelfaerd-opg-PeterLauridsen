@@ -1,13 +1,10 @@
-body {
-  margin: 0 auto;
-  padding: 2rem;
-  font-family: "Oswald", sans-serif;
-}
-
 .bannerPicture {
   height: 27vh;
   background-position: center;
   background-size: cover;
+  display: grid;
+  align-content: center;
+  padding: 0 40rem;
 }
 
 .whiteText {
@@ -24,41 +21,86 @@ body {
 }
 
 .whiteTextMod {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1rem;
-
-  
+  display: grid;
+  align-items: center;
 }
 
 .card-grid {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: 30rem 30rem 30rem;
   text-align: left;
+  justify-content: center;
 }
 
-.cardPic{
+.bg-softBlue {
+  background-color: #e6f1ff;
+}
+
+.aboutArticle {
+  width: 25rem;
+  height: 28rem;
+}
+
+.aboutTextSize{
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.cardPic {
   width: 15vw;
 }
-.cardPicText{
+.cardPicText {
   width: 18rem;
 }
-.cardPicTextHeader{
+.cardPicTextHeader {
   border-bottom: 1px solid gray;
   width: 15vw;
   text-transform: uppercase;
 }
 
-.volunteerSection{
+.volunteerSection {
   border: 1px solid black;
   width: 15vw;
   height: 45rem;
-  
 }
 .card-dyr {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
+  grid-auto-flow: column;
   text-align: left;
+  border: 1px solid black;
+}
+
+.card-dyr-pic {
+  width: 12rem;
+  height: 16rem;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-dyr-pic-text {
+  width: 12rem;
+  height: 16rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.blueText {
+  color: rgb(65, 65, 186);
+}
+
+.newsletterGrid{
+  display: grid;
+  grid-template-columns: 20rem;
+ 
+}
+
+.newsletterFlex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+ flex-direction: column;
 }

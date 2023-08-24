@@ -1,20 +1,6 @@
-nav {
-  display: flex;
-  justify-content: space-between;
-  /* position: sticky; */
-  z-index: 999;
-  font-size: 1rem;
-  color: white;
-  text-decoration: none;
-}
-
-
-header {
-  display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
-  position: sticky;
-  z-index: 999;
+.nav {
+  display: grid;
+  grid-auto-flow: column;
 }
 
 .herotext {
@@ -28,30 +14,19 @@ header {
 
 .d-flex {
   display: flex;
-  align-items: center;
   margin-bottom: 1rem;
-
+  > a {
+    padding: 0 0.3rem;
+  }
 }
 
-.navText{
-    text-decoration: none;
-    color: gray
+.navText {
+  text-decoration: none;
+  color: gray;
 }
 
-.nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80rem;
-
-  
-
-}
-
-.center{
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
- 
-  
 }
