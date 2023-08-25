@@ -12,16 +12,26 @@ const Header = () => {
         </span>
 
         <nav className="d-flex center">
-          <Link to="/" className="navText">Hjem</Link>
-          <Link to="#" className="navText" >Om os</Link>
-          <Link to="#" className="navText">Bliv Frivillig</Link>
-          <Link to="#" className="navText">Dyr i nød?</Link>
-          <Link to="#" className="navText">Adopter et dyr</Link>
+          <Link to="/" className="navText">
+            Hjem
+          </Link>
+          <Link to="#" className="navText">
+            Om os
+          </Link>
+          <Link to="#" className="navText">
+            Bliv Frivillig
+          </Link>
+          <Link to="#" className="navText">
+            Dyr i nød?
+          </Link>
+          <Link to="#" className="navText">
+            Adopter et dyr
+          </Link>
         </nav>
       </header>
 
       <Outlet />
-   <Footer />
+      <Footer />
     </>
   );
 };

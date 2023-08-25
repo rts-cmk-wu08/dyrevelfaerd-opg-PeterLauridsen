@@ -6,20 +6,24 @@ footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 10rem;
-    text-align: center;  
+    text-align: center; 
+  
     > p {
       grid-column:2 ;
+      padding: 7rem 0 0 0;
     }     
 }
 
 .contactH2{
     text-transform: uppercase;
     font-weight: 300;
+    font-size: 1.5rem ;
 } 
 
 .partnersH2{
     text-transform: uppercase;
     font-weight: 300;
+    font-size: 1.5rem ;
 }
 
 
@@ -27,17 +31,22 @@ footer{
     display: flex;
     flex-direction: column;
     text-align: left;
+    justify-content: center;
 }
 
 .contactFlex{
     display: flex;
     flex-direction: column;
-    text-align: left;
-    justify-content: center;
-    padding: 0 1rem;
+    text-align: start;
+    justify-content:center;
+  
 }
 
 .blueTextPartners{
     color: rgb(65, 65, 186);
 }
 
+.pSizeText{
+    font-size: 0.8rem;
+    font-weight: 300;
+}

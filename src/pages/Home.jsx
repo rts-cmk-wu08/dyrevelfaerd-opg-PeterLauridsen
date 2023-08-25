@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Home.css";
+import { Navigate } from "react-router-dom";
 
 const Home = () => {
   const allDataArray = [
@@ -26,7 +27,6 @@ const Home = () => {
 
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
-
   const [dataAdoptsections, setDataAdoptsections] = useState();
   const [dataAbout, setDataAbout] = useState();
   const [dataAnimals, setDataAnimals] = useState();
@@ -36,11 +36,9 @@ const Home = () => {
   if (error) {
     return <div>Oops! Something went wrong!</div>;
   }
-
   if (loading) {
     return <div>Loading...</div>;
   }
-
   if (!error && !loading) {
     return (
       <main>
@@ -61,7 +59,7 @@ const Home = () => {
         {/* {Header} */}
 
         {/* {About} */}
-        <section className="card-grid">
+        <section className="card-grid aboutSize">
           {dataAbout.map((about) => {
             return (
               <article className="aboutArticle" key={about.id}>
@@ -78,13 +76,22 @@ const Home = () => {
           {dataVolunteers.map((volunteer) => {
             return (
               <article key={volunteer.id} className="volunteerSection">
-                <h2 className="cardPicTextHeader">{volunteer.title}</h2>
-                <img
-                  className="cardPic"
-                  src={volunteer.asset.url}
-                  alt={volunteer.title}
-                />
-                <p className="cardPicText">{volunteer.content}</p>
+                <div className="cardPicTextHeader">
+                  <h2>{volunteer.title}</h2>
+                </div>
+                <div
+                  className="picTextCard {"
+                >
+                  <img
+                    className="cardPic"
+                    src={volunteer.asset.url}
+                    alt={volunteer.title}
+                  />
+                  <p className="cardPicText">{volunteer.content}</p>
+                </div>
+                <div className="textBottomCard">
+                  <p>{volunteer.extra}</p>
+                </div>
               </article>
             );
           })}
@@ -115,8 +122,8 @@ const Home = () => {
           <form>
             <input type="text" placeholder="Email" />
             <input type="text" placeholder="Navn" />
+            <button>Tilmeld</button>
           </form>
-          <button>Tilmeld</button>
         </section>
         {/* {Newsletter} */}
 
@@ -133,11 +140,13 @@ const Home = () => {
           </p>
         </section>
         {/* {Adopter et dyr} */}
-       
+
         {/* {Dyr hos os} */}
         <section>
-          <h1 className="blueText">Dyr hos os</h1>
-          <p>{dataAnimals.length} dyr</p>
+          <div className="dyrHosOsText">
+            <h1 className="blueText">Dyr hos os</h1>
+            <p>{dataAnimals.length} dyr</p>
+          </div>
           <div className="gridContainer">
             {dataAnimals.map((animal) => {
               return (
@@ -145,13 +154,14 @@ const Home = () => {
                   <div>
                     <img
                       className="card-dyr-pic"
+                      style={{ borderRadius: "0.2rem", objectFit: "cover" }}
                       src={animal.asset.url}
                       alt={animal.title}
                     />
                   </div>
-                  <span>
-                    <h2>{animal.name}</h2>
-                    <p>{animal.description}</p>
+                  <span className="centerAnimalText">
+                    <h2 className="animalName">{animal.name}</h2>
+                    <p className="animalDescription">{animal.description}</p>
                   </span>
                 </article>
               );
@@ -159,7 +169,6 @@ const Home = () => {
           </div>
         </section>
         {/* {Dyr hos os} */}
-        
       </main>
     );
   }

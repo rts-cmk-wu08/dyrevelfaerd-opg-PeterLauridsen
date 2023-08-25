@@ -30,6 +30,12 @@
   grid-template-columns: 30rem 30rem 30rem;
   text-align: left;
   justify-content: center;
+  column-gap: 1rem;
+
+}
+
+.aboutSize{
+  height: 25rem;
 }
 
 .bg-softBlue {
@@ -41,33 +47,40 @@
   height: 28rem;
 }
 
-.aboutTextSize{
+.aboutTextSize {
   font-size: 1.5rem;
   font-weight: 400;
 }
 
 .cardPic {
   width: 15vw;
+  border-radius: 0.2rem;
+  height: 10rem;
 }
 .cardPicText {
-  width: 18rem;
+  width: 15rem;
+  display: flex;
+  justify-content: center;
 }
 .cardPicTextHeader {
-  border-bottom: 1px solid gray;
-  width: 15vw;
+  background-color: rgb(225, 225, 225);
   text-transform: uppercase;
 }
 
 .volunteerSection {
-  border: 1px solid black;
-  width: 15vw;
-  height: 45rem;
+  display: grid;
+  grid-template-rows: 0.5fr 8fr 0.5fr;
+  height: 35rem;
+  margin: 2rem;
+
 }
+
 .card-dyr {
   display: grid;
   grid-auto-flow: column;
   text-align: left;
-  border: 1px solid black;
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 0.2rem;
 }
 
 .card-dyr-pic {
@@ -77,7 +90,11 @@
 
 .gridContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 35rem 35rem;
+  column-gap: 1rem;
+  row-gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .card-dyr-pic-text {
@@ -87,20 +104,56 @@
   grid-template-rows: 1fr 1fr;
 }
 
+.dyrHosOsText {
+  display: grid;
+  grid-template-rows: 2rem;
+  justify-content: center;
+  margin-right: 65rem;
+}
+
 .blueText {
   color: rgb(65, 65, 186);
 }
 
-.newsletterGrid{
+.newsletterGrid {
   display: grid;
   grid-template-columns: 20rem;
- 
 }
 
-.newsletterFlex{
+.newsletterFlex {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 10rem;
- flex-direction: column;
+  flex-direction: column;
+}
+
+.picTextCard {
+  background-color: white;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.textBottomCard {
+  background-color: rgb(213, 213, 213);
+}
+
+.animalName{
+  font-size: 1.5rem;
+  font-weight: 300;
+  
+}
+
+.animalDescription{
+  font-size: 0.8rem;
+  font-weight: 300;
+  width: 20rem;
+  }
+.centerAnimalText{
+  text-align: left;
+  display: grid;
+  grid-template-rows: 3rem;
+  grid-template-columns: 1fr;
+  margin: 2rem;
 }
