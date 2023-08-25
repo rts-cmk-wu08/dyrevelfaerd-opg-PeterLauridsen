@@ -157,3 +157,63 @@
   grid-template-columns: 1fr;
   margin: 2rem;
 }
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  /* Adjust header and banner */
+  .bannerPicture {
+    padding: 0;
+    height: auto;
+  }
+
+  /* Center align header text */
+  .whiteTextMod {
+    text-align: center;
+  }
+
+  /* Adjust font sizes for mobile */
+  .whiteText-size-h1 {
+    font-size: 1.5rem;
+  }
+
+  .whiteText-size-p {
+    font-size: 1rem;
+  }
+
+  /* Adjust grid layout for mobile */
+  .card-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    text-align: left; /* Align text to the left */
+    justify-items: start; /* Align items to the start */
+    gap: 1.5rem; /* Increase gap between items */
+  }
+
+  /* Adjust individual card styles */
+  .aboutArticle,
+  .volunteerSection,
+  .card-dyr {
+    margin: 1rem 0; /* Add vertical margin for separation */
+  }
+
+  /* Adjust font size for smaller text */
+  .aboutTextSize,
+  .animalName {
+    font-size: 1rem;
+  }
+
+  /* Center align animal description */
+  .centerAnimalText {
+    text-align: center;
+  }
+
+  /* Adjust newsletter section for mobile */
+  .bg-softBlue,
+  .newsletterFlex {
+    padding: 1rem;
+  }
+
+  /* Adjust form input sizes for mobile */
+  form input[type="text"] {
+    width: 100%;
+  }
+}

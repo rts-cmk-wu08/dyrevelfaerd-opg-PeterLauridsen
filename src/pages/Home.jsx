@@ -32,6 +32,8 @@ const Home = () => {
   const [dataAnimals, setDataAnimals] = useState();
   const [dataAssets, setDataAssets] = useState();
   const [dataVolunteers, setDataVolunteers] = useState();
+  
+  
 
   if (error) {
     return <div>Oops! Something went wrong!</div>;
