@@ -56,7 +56,9 @@ const YourFormComponent = () => {
         onChange={(e) => setName(e.target.value)}
         required
       />
-      <button type="submit">Tilmeld</button>
+      <div>
+      <button type="submit" className='btn'>Tilmeld</button>
+      </div>
     </form>
   );
 };

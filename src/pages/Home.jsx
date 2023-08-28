@@ -60,7 +60,7 @@ const Home = () => {
         {/* {Header} */}
 
         {/* {About} */}
-        <section className="card-grid aboutSize">
+        <section className="card-grid aboutSize" id="about">
           {dataAbout.map((about) => {
             return (
               <article className="aboutArticle" key={about.id}>
@@ -73,7 +73,7 @@ const Home = () => {
         {/* {About} */}
 
         {/* {Frivilig} */}
-        <section className="card-grid bg-softBlue">
+        <section id="volunteer" className="card-grid bg-softBlue">
           {dataVolunteers.map((volunteer) => {
             return (
               <article key={volunteer.id} className="volunteerSection">
@@ -83,13 +83,19 @@ const Home = () => {
                 <div className="picTextCard {">
                   <img
                     className="cardPic"
+                    style={{
+                      width: "17rem",
+                      height: "17rem",
+                      borderRadius: "0.2rem",
+                      justifySelf: "center",
+                    }}
                     src={volunteer.asset.url}
                     alt={volunteer.title}
                   />
                   <p className="cardPicText">{volunteer.content}</p>
                 </div>
                 <div className="textBottomCard">
-                  <p>{volunteer.extra}</p>
+                  <p className="grayPtext italicText">{volunteer.extra}</p>
                 </div>
               </article>
             );
@@ -99,6 +105,7 @@ const Home = () => {
 
         {/* {Dyr i nød} */}
         <section
+          id="animals-in-need"
           className="bannerPicture"
           style={{ backgroundImage: `url(${dataAdoptsections[1].asset.url})` }}
         >
@@ -112,7 +119,7 @@ const Home = () => {
         {/* {Dyr i nød} */}
 
         {/* {Newsletter} */}
-        <section className="bg-softBlue newsletterFlex">
+        <section className="bg-softBlue newsletterFlex" id="newsletter">
           <h1 className="blueText">Tilmeld vores nyhedsbrev</h1>
           <p>
             Få inspiration og nyheder om dyrevelfærd og vores arbejde. direkte i
@@ -124,6 +131,7 @@ const Home = () => {
 
         {/* {Adopter et dyr} */}
         <section
+          id="adopt"
           className="bannerPicture"
           style={{ backgroundImage: `url(${dataAdoptsections[2].asset.url})` }}
         >
