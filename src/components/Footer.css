@@ -1,52 +1,65 @@
-footer{
-    height: 10rem;
-}
+/* Footer.css */
 
-.footerGrid{
+.bg-softBlue {
+    background-color: #e6f1ff;
+  }
+  
+  .footerGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 10rem;
-    text-align: center; 
+    gap: 1rem;
+    padding: 2rem;
+    align-items: center;
+    background-color: #e6f1ff;
+    /* width: 50vw; */
+  }
   
-    > p {
-      grid-column:2 ;
-      padding: 7rem 0 0 0;
-    }     
-}
-
-.contactH2{
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 1.5rem ;
-} 
-
-.partnersH2{
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 1.5rem ;
-}
-
-
-.partnerFlex{
+  .contactFlex,
+  .partnerFlex {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    align-items: center;
     justify-content: center;
-}
 
-.contactFlex{
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    justify-content:center;
+  }
   
-}
+  .contactH2,
+  .partnersH2 {
+    margin: 0 0 0.5rem ;
+    text-transform: uppercase;
+    color: black;
+    text-align: left;
+    font-size: xx-large;
+  }
 
-.blueTextPartners{
-    color: rgb(65, 65, 186);
-}
-
-.pSizeText{
+  .contactH2Padding{
+    padding-right: 10rem;
+  }
+  
+  .partnerH2Padding{
+    padding-left: 1rem;
+  }
+  .pSizeText {
     font-size: 0.8rem;
-    font-weight: 300;
-}
+    text-align: left;
+    margin: 0.5rem;
+  }
+  
+  .blueTextPartners {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .blueText {
+    color: blue; /* Set text color to blue */
+  }
+
+  .textLeft {
+    text-align: left;
+  }
+
+  .copyRight {
+    text-align: center;
+    padding-top: 10rem;
+  }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import "./AnimalDetail.css";
 
 const AnimalDetail = () => {
   const [error, setError] = useState(false);
@@ -22,23 +23,32 @@ const AnimalDetail = () => {
       });
   }, []);
 
-    if (error) {
-        return <div>Oops! Something went wrong!</div>;
-    }
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-    if (!error && !loading) {
-        return (
-            <main>
-                <h1>{dataAnimals.name}</h1>
-                <p>{dataAnimals.description}</p>
-                <img src={dataAnimals.asset.url} alt={dataAnimals.asset.altText} />
-                <Link to="/"> Tilbage til forsiden</Link>;
-            </main>
-        );
-    }
-
+  if (error) {
+    return <div>Oops! Something went wrong!</div>;
+  }
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  if (!error && !loading) {
+    return (
+      <main>
+        <div className="containerAnimal">
+          <h1>{dataAnimals.name}</h1>
+          <p className="animalDescriptionDetail" >{dataAnimals.description}</p>
+          <img
+            src={dataAnimals.asset.url}
+            alt={dataAnimals.asset.altText}
+            style={{
+              width: "30rem",
+              height: "auto",
+              borderRadius: "0.2rem",
+            }}
+          />
+          <Link to="/"> Tilbage til forsiden</Link>
+        </div>
+      </main>
+    );
+  }
 };
 
 export default AnimalDetail;

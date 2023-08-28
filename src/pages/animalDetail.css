@@ -1,0 +1,15 @@
+.containerAnimal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.animalDescriptionDetail {
+  width: 30rem;
+  text-align: left;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+

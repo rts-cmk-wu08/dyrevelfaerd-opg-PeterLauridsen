@@ -23,13 +23,11 @@
 .navText {
   text-decoration: none;
   color: gray;
-  }
+}
 
 .navText:hover {
   color: black;
 }
- 
-
 
 .center {
   display: flex;

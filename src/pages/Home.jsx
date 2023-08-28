@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import "./Home.css";
 import NewsletterForm from "../components/NewsletterForm";
 import { Link } from "react-router-dom";
-import AnimalDetail from "./AnimalDetail";
-
 
 const Home = () => {
   const allDataArray = [
@@ -35,8 +33,6 @@ const Home = () => {
   const [dataAnimals, setDataAnimals] = useState();
   const [dataAssets, setDataAssets] = useState();
   const [dataVolunteers, setDataVolunteers] = useState();
-  
-  
 
   if (error) {
     return <div>Oops! Something went wrong!</div>;
@@ -84,9 +80,7 @@ const Home = () => {
                 <div className="cardPicTextHeader">
                   <h2>{volunteer.title}</h2>
                 </div>
-                <div
-                  className="picTextCard {"
-                >
+                <div className="picTextCard {">
                   <img
                     className="cardPic"
                     src={volunteer.asset.url}
@@ -124,15 +118,9 @@ const Home = () => {
             Få inspiration og nyheder om dyrevelfærd og vores arbejde. direkte i
             din inbakke.
           </p>
-          {/* <form>
-            <input type="text" placeholder="Email" />
-            <input type="text" placeholder="Navn" />
-            <button>Tilmeld</button>
-          </form> */}
           <NewsletterForm />
         </section>
         {/* {Newsletter} */}
-
 
         {/* {Adopter et dyr} */}
         <section
@@ -157,7 +145,11 @@ const Home = () => {
           <div className="gridContainer">
             {dataAnimals.map((animal) => {
               return (
-                <Link to={`/AnimalDetail/${animal.id}`} className="card-dyr" key={animal.id}>
+                <Link
+                  to={`/AnimalDetail/${animal.id}`}
+                  className="card-dyr"
+                  key={animal.id}
+                >
                   <div>
                     <img
                       className="card-dyr-pic"
