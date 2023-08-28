@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import "./Home.css";
-import { Navigate } from "react-router-dom";
+import NewsletterForm from "../components/NewsletterForm";
+import { Link } from "react-router-dom";
+import AnimalDetail from "./AnimalDetail";
+
 
 const Home = () => {
   const allDataArray = [
@@ -121,13 +124,15 @@ const Home = () => {
             Få inspiration og nyheder om dyrevelfærd og vores arbejde. direkte i
             din inbakke.
           </p>
-          <form>
+          {/* <form>
             <input type="text" placeholder="Email" />
             <input type="text" placeholder="Navn" />
             <button>Tilmeld</button>
-          </form>
+          </form> */}
+          <NewsletterForm />
         </section>
         {/* {Newsletter} */}
+
 
         {/* {Adopter et dyr} */}
         <section
@@ -152,7 +157,7 @@ const Home = () => {
           <div className="gridContainer">
             {dataAnimals.map((animal) => {
               return (
-                <article className="card-dyr" key={animal.id}>
+                <Link to={`/AnimalDetail/${animal.id}`} className="card-dyr" key={animal.id}>
                   <div>
                     <img
                       className="card-dyr-pic"
@@ -165,7 +170,7 @@ const Home = () => {
                     <h2 className="animalName">{animal.name}</h2>
                     <p className="animalDescription">{animal.description}</p>
                   </span>
-                </article>
+                </Link>
               );
             })}
           </div>

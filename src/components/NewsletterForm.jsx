@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import './Form.css'; // Import your CSS file
+import './NewsletterForm.css'; // Import your CSS file
+import { Navigate } from 'react-router-dom';
 
 
 const YourFormComponent = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
-
+  const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -27,6 +28,7 @@ const YourFormComponent = () => {
     // Clear form inputs
     setEmail('');
     setName('');
+    setSubmitted(true);
   };
 
   const validateEmail = (email) => {
@@ -34,6 +36,9 @@ const YourFormComponent = () => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
   };
+  if (submitted) {
+    return <Navigate to="/thankyou" />;
+  }
 
   return (
     <form onSubmit={handleSubmit}>
