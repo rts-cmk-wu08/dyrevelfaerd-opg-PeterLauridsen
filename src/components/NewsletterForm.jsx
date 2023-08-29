@@ -1,38 +1,31 @@
-import React, { useState } from 'react';
-import './NewsletterForm.css'; // Import your CSS file
-import { Navigate } from 'react-router-dom';
+import React, { useState } from "react";
+import "./NewsletterForm.css"; // Import your CSS file
+import { Navigate } from "react-router-dom";
 
-
-const YourFormComponent = () => {
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
+const NewsletterForm = () => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Perform form validation
     if (!validateEmail(email)) {
-      alert('Please enter a valid email address.');
+      alert("Indtast venligst en email adresse.");
       return;
     }
 
-    if (name.trim() === '') {
-      alert('Please enter a name.');
+    if (name.trim() === "") {
+      alert("Indtast venligst et navn.");
       return;
     }
 
-    // Submit the form
-    // You can perform your submission logic here
-    console.log('Form submitted:', email, name);
-
-    // Clear form inputs
-    setEmail('');
-    setName('');
+    console.log("Form submitted:", email, name);
+    setEmail("");
+    setName("");
     setSubmitted(true);
   };
 
   const validateEmail = (email) => {
-    // Basic email validation using regular expression
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
   };
@@ -41,6 +34,7 @@ const YourFormComponent = () => {
   }
 
   return (
+    
     <form onSubmit={handleSubmit}>
       <input
         type="text"
@@ -57,10 +51,12 @@ const YourFormComponent = () => {
         required
       />
       <div>
-      <button type="submit" className='btn'>Tilmeld</button>
+        <button type="submit" className="btn">
+          Tilmeld
+        </button>
       </div>
     </form>
   );
 };
 
-export default YourFormComponent;
+export default NewsletterForm;

@@ -34,7 +34,7 @@ const AnimalDetail = () => {
       <main>
         <div className="containerAnimal">
           <h1>{dataAnimals.name}</h1>
-          <p className="animalDescriptionDetail" >{dataAnimals.description}</p>
+          <p className="animalDescriptionDetail">{dataAnimals.description}</p>
           <img
             src={dataAnimals.asset.url}
             alt={dataAnimals.asset.altText}

@@ -120,11 +120,13 @@ const Home = () => {
 
         {/* {Newsletter} */}
         <section className="bg-softBlue newsletterFlex" id="newsletter">
-          <h1 className="blueText">Tilmeld vores nyhedsbrev</h1>
-          <p>
-            Få inspiration og nyheder om dyrevelfærd og vores arbejde. direkte i
-            din inbakke.
-          </p>
+          <div className="newsletterText">
+            <h1 className="blueText">Tilmeld vores nyhedsbrev</h1>
+            <p>
+              Få inspiration og nyheder om dyrevelfærd og vores arbejde. direkte
+              i din inbakke.
+            </p>
+          </div>
           <NewsletterForm />
         </section>
         {/* {Newsletter} */}
@@ -145,7 +147,7 @@ const Home = () => {
         {/* {Adopter et dyr} */}
 
         {/* {Dyr hos os} */}
-        <section>
+        <section className="dyrHosOsContainer">
           <div className="dyrHosOsText">
             <h1 className="blueText">Dyr hos os</h1>
             <p>{dataAnimals.length} dyr</p>

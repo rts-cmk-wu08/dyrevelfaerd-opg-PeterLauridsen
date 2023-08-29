@@ -1,4 +1,4 @@
-Dyrevelfærd
+Foreningen for Dyrevelfærd
 
 Peter Højlund Lauridsen
 Hold: 1146522c308
@@ -17,11 +17,10 @@ Hjemmesiden består af forskellige sektioner, der kan navigeres glidende ved hj�
 *Komponenter*
 Home Component Footer Component Header Component 
 Home-komponenten (Home.jsx) udgør hjemmesiden og styrer forskellige sektioner med smooth scroll. 
-Den bruger følgende komponenter og teknologier.
-
+Den bruger følgende komponenter og teknologier:
 *useEffect og useState fra React til datahåndtering.*
 *react-router-dom til route håndtering og navigation.*
-*fetch API til at hente data fra forskellige API-endepunkter.*
+*fetch API til at hente data fra forskellige API-endpoints.*
 *CSS-styling til at tilpasse udseendet af sektionerne.*
 
 *Implementeringsdetaljer*
@@ -46,11 +45,12 @@ Brug CSS til at tilpasse udseendet, så det matcher det ønskede design.
 *Kør Projekter*
 For at starte projektet på din lokale maskine skal du køre følgende kommando:
 
-*npm start på API*
+npm start på API
 Dette vil starte udviklingsserveren og gøre dit websted tilgængeligt på din lokaladresse.
 
-*npm run dev på webapp*
+npm run dev på webapp
 Dette vil starte sitet og gøre dit websted tilgængeligt på lokalhost.
 
 *Konklusion*
-Dette projekt demonstrerer implementeringen af en React-hjemmeside med smooth scroll-funktionalitet. Ved at følge dokumentationen kan du oprette en brugervenlig hjemmeside med glidende navigation og attraktive sektioner.
+Dette projekt demonstrerer implementeringen af en React-hjemmeside med smooth scroll-funktionalitet. 
+Ved at følge dokumentationen kan du oprette en brugervenlig hjemmeside med glidende navigation og attraktive sektioner.
