@@ -39,10 +39,8 @@ export default function App() {
         Vores søde dyr, som venter på at få et nyt hjem
       </h2>
       <SimpleImageSlider
-        // width={1135} 
-        // height={500} 
-        width={window.innerWidth > 768 ? 1135 : window.innerWidth - 40}
-          height={window.innerWidth > 768 ? 500 : (window.innerWidth - 40) * 0.8}
+        width={window.innerWidth > 768 ? 1135 : window.innerWidth - 40} // window.innerWidth - 40 er bredden af parent elementet
+        height={window.innerWidth > 768 ? 500 : (window.innerWidth - 40) * 0.8} 
         images={sliderImages}
         showBullets={true}
         showNavs={true}

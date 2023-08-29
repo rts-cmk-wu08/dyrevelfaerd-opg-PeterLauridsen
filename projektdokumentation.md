@@ -9,6 +9,7 @@ Styling: CSS
 Routing: react-router-dom
 Data Fetching: Fetch API
 Form: HTML Form
+Slider:Simple React Slider
 
 _Beskrivelse_
 Dette dokument beskriver implementeringen af en React-hjemmeside med smooth scroll-funktionalitet.
