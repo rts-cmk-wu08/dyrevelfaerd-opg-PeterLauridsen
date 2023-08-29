@@ -55,3 +55,4 @@ Dette vil starte sitet og gøre dit websted tilgængeligt på lokalhost.
 _Konklusion_
 Dette projekt demonstrerer implementeringen af en React-hjemmeside med smooth scroll-funktionalitet.
 Ved at følge dokumentationen kan du oprette en brugervenlig hjemmeside med glidende navigation og attraktive sektioner.
+
