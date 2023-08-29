@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./Home.css";
 import NewsletterForm from "../components/NewsletterForm";
 import { Link } from "react-router-dom";
+import SliderImg from "../components/SliderImg";
 
 const Home = () => {
   const allDataArray = [
@@ -33,6 +34,7 @@ const Home = () => {
   const [dataAnimals, setDataAnimals] = useState();
   const [dataAssets, setDataAssets] = useState();
   const [dataVolunteers, setDataVolunteers] = useState();
+  const [imageNum, setImageNum] = useState(1);
 
   if (error) {
     return <div>Oops! Something went wrong!</div>;
@@ -148,6 +150,7 @@ const Home = () => {
 
         {/* {Dyr hos os} */}
         <section className="dyrHosOsContainer">
+          <SliderImg />
           <div className="dyrHosOsText">
             <h1 className="blueText">Dyr hos os</h1>
             <p>{dataAnimals.length} dyr</p>
