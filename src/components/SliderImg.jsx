@@ -3,7 +3,6 @@ import SimpleImageSlider from "react-simple-image-slider";
 import "./SliderImg.css";
 export default function App() {
   const [imageNum, setImageNum] = useState(1);
-
   const sliderImages = [
     {
       url: "http://localhost:4000/file-bucket/1589743596506amina.jpg",

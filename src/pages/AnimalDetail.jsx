@@ -14,13 +14,12 @@ const AnimalDetail = () => {
       .then((data) => {
         console.log(data);
         setDataAnimals(data);
-        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
         setError(true);
-        setLoading(false);
-      });
+      })
+      .finally(() => setLoading(false))
   }, []);
 
   if (error) {
